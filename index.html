@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <title>Zadanie rektutacyjne IAI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="css/index.css" rel="stylesheet">
+
+</head>
+
+<body>
+    
+    <button id="open">Sprawdź przedmiot</button>
+
+    <div id="box" class="box">
+
+        <div class="box-content">
+            <div class="images">
+                <div id="carouselSimple" class="carousel slide" data-interval="false">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <span class="helper"></span>
+                            <img src="img/xbox-silver-1.png" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <span class="helper"></span>
+                            <img src="img/xbox-silver-2.png" alt="Second slide">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselSimple" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselSimple" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="desc">
+                
+                <div class="rw1">
+                    <p class="title"></p>
+                    <span class="closebtn">&times;</span>
+                </div>
+
+                <div class="rw2">
+                    <p class="price bluetext"></p>
+                </div>
+
+                <div class="rw3">
+                    <p>Rozmiar:</p>
+                    <div class="rw3-1">
+                    </div>
+                </div>
+
+                <div class="rw4">
+                    <p>Wariant:</p>
+                    <select class="version">
+                    </select>
+                </div>
+
+                <div class="rw5">
+                    <div class="available">
+
+                    </div>
+                    <img src="img/timer_icon.png" alt="Timer icon">
+                    <div class="deliveryinfo">
+                        Możemy wysłać już dzisiaj!<br />
+                        <a class="bluetext" href="#">Sprawdź czasy i koszty wysyłki</a>
+                    </div>
+                </div>
+
+                <div class="rw6">
+                    <div class="count">
+                        <button id="sub">-</button>
+                        <input type="number" value="1" min="1">
+                        <button id="add">+</button>
+                    </div>
+                    <button id="submitbtn">Dodaj do koszyka</button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <strong class="mr-auto">Sklep</strong>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="toast-body">
+        Dodałeś <span id="toastph"></span> x<span id="amount"></span> do koszyka
+        </div>
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>

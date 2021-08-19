@@ -1,0 +1,412 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+.box {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 25vh;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+}
+
+.box-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 2.5vh;
+    height: 50vh;
+    width: 900px;
+    border-radius: 1vh;
+    border: none;
+    font-size: 1.5vh;
+}
+
+#open{
+    margin: 2vh auto;
+    width: 300px;
+    height: 5vh;
+    display: block;
+    font-size: 2.5vh;
+    border: 0.2vh black solid;
+}
+
+.images{
+    width: 45%;
+    float: left;
+    height: 100%;
+}
+
+.desc{
+    width: 55%;
+    height: 100%;
+    float: right;
+}
+
+.helper{
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.carousel{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.carousel-item img{
+    width: 90%;
+    vertical-align: middle;
+}
+
+.carousel, .carousel-inner, .carousel-item{
+    text-decoration: none;
+    height: 100%;
+}
+
+.closebtn {
+    color: #aaaaaa;
+    float: right;
+    font-size: 3vh;
+    font-weight: bold;
+    width: 5%;
+}
+
+.closebtn:hover, .closebtn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.title{
+    font-weight: bold;
+    float: left;
+    text-overflow: clip;
+    font-size: 2.2vh;
+    width: 90%;
+    margin: 0;
+}
+
+.rw1{
+    height: 16%;
+}
+
+.price{
+    font-size: 2.3vh;
+    font-weight: bold;
+}
+
+.rw2{
+    height: 10%;
+}
+
+.rw3{
+    height: 20%;
+}
+
+.rw3-1{
+    height: 60%;
+}
+
+.rw3 p, .rw4 p{
+    margin-bottom: 1%;
+}
+
+.rw3-1 button{
+    height: 90%;
+    width: 25%;
+    margin-right: 5%;
+    background-color: white;
+    border: 0.2vh #C3C7C8 solid;
+    border-radius: 1vh;
+    color: #333333;
+    padding: 0;
+}
+
+.rw3-1 button.active{
+    border: 0.3vh #0090F6 solid;
+    color: black;
+}
+
+.rw4{
+    height: 20%;
+    margin-top: 3%;
+}
+
+.rw4 select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 50%;
+    border-radius: 1vh;
+    padding-left: 1vw;
+    border: 0.2vh #C3C7C8 solid;
+}
+
+.rw4 select::-ms-expand{
+    display: none;
+}
+
+.rw5{
+    height: 13%;
+}
+
+.available{
+    float: left;
+    width: 45%;
+}
+
+.deliveryinfo{
+    float: right;
+    width: 45%;
+}
+
+.rw5 img{
+    height: 4vh;
+    float: left;
+}
+
+.deliveryinfo a{
+    text-decoration: none;
+}
+
+.rw6{
+    height: 20%;
+    margin-top: 2%;
+}
+
+.rw6 #submitbtn{
+    float: left;
+    margin-left: 5%;
+    width: 55%;
+    height: 75%;
+    color: white;
+    background-color: #0090F6;
+    border: none;
+    border-radius: 1vh;
+    font-weight: bold;
+    font-size: 1.6vh;
+}
+
+.count{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    float: left;
+}
+
+.count #sub{
+    background-color: white;
+    border: 0.2vh #C3C7C8 solid;
+    border-right: none;
+    padding: 0;
+    margin: 0;
+    height: 75%;
+    width: 30%;
+    border-radius: 1vh 0 0 1vh;
+    font-size: 3vh;
+}
+
+.count input{
+    -moz-appearance: textfield;
+    flex-grow: 2;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    border: 0.2vh #C3C7C8 solid;
+    border-right: none;
+    border-left: none;
+    height: 75%;
+    width: 40%;
+    text-align: center;
+}
+
+.count input:focus{
+    outline: none;
+}
+
+.count input::-webkit-outer-spin-button,
+.count input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.count #add{
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    border: 0.2vh #C3C7C8 solid;
+    border-left: none;
+    height: 75%;
+    width: 30%;
+    border-radius: 0 1vh 1vh 0;
+    font-size: 2.5vh;
+}
+
+.toast{
+    position: absolute;
+    bottom: 1vh;
+    right: 1vw;
+    z-index: 2;
+    height: 13vh;
+    width: 30vw;
+    font-size: 1.7vh;
+    border-radius: 1vh;
+    border: none;
+}
+
+.toast .toast-header{
+    width: 100%;
+    height: 40%;
+    padding: 1vh;
+    border-top-left-radius: 1vh;
+    border-top-right-radius: 1vh;
+    border: 0.2vh;
+}
+
+.toast .toast-body{
+    width: 100%;
+    height: 60%;
+    padding: 1vh;
+}
+
+.toast button{
+    background: none;
+    border: none;
+    margin: 0;
+    margin-left: 80%;
+    margin-bottom: 0 !important;
+    padding: 0;
+}
+
+.toast strong{
+    margin-left: 2%;
+}
+
+.bluetext{
+    color: #0090F6;
+}
+
+.greytext{
+    color: #333333;
+}
+
+@media screen and (max-width: 900px){
+    .box-content{
+        width: 90%;
+    }
+
+    #open{
+        width: 30%;
+    }
+
+    .title{
+        font-size: 0.8rem;
+    }
+
+    .price{
+        font-size: 0.8rem;
+    }
+
+    .rw1{
+        height: 12%;
+    }
+
+    .rw2{
+        height: 7%;
+    }
+
+    .available{
+        font-size: 0.5rem;
+    }
+
+    .deliveryinfo{
+        font-size: 0.5rem;
+    }
+
+    .rw5 img{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px){
+    #open{
+        width: 50%;
+    }
+}
+
+@media screen and (max-height: 800px){
+    .box-content{
+        height: 65vh;
+    }
+
+    .box{
+        padding-top: 17vh;
+    }
+}
+
+@media screen and (max-height: 600px) and (min-aspect-ratio: 20/9){
+    .box-content{
+        font-size: 0.7rem;
+        height: 80vh;
+    }
+
+    .box{
+        padding-top: 10vh;
+    }
+
+    .title{
+        font-size: 0.7rem;
+    }
+
+    .price{
+        font-size: 0.7rem;
+    }
+
+    .available{
+        font-size: 0.7rem;
+    }
+
+    .deliveryinfo{
+        font-size: 0.7rem;
+    }
+}
+
+@media screen and (max-height: 600px) and (max-aspect-ratio: 20/9){
+    .box-content{
+        font-size: 2vh;
+    }
+
+    .title{
+        font-size: 2vh;
+    }
+
+    .price{
+        font-size: 2vh;
+    }
+
+    .available{
+        font-size: 2vh;
+    }
+
+    .deliveryinfo{
+        font-size: 2vh;
+    }
+}
+
+@media screen and (min-aspect-ratio: 18/9){
+    .carousel{
+        width: 50%;
+    }
+}
